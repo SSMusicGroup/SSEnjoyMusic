@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "440019145719",
+    "firebase_url": "https://ssenjoymusic-918b8.firebaseio.com",
+    "project_id": "ssenjoymusic-918b8",
+    "storage_bucket": "ssenjoymusic-918b8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:440019145719:android:4eef4006602bb8b02b54f2",
+        "android_client_info": {
+          "package_name": "com.example.ssenjoymusicapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "440019145719-2iljvo2b3rgbp3vd147nmv8s5oeg0bnv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFtFmsujazxRsaZJ4PVnpOYzWfCVfrVzY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "440019145719-2iljvo2b3rgbp3vd147nmv8s5oeg0bnv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
