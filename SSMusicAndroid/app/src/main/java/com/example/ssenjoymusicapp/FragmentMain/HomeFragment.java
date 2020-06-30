@@ -11,7 +11,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.ssenjoymusicapp.Adapter.MusicAdapter;
 import com.example.ssenjoymusicapp.R;
@@ -48,11 +50,34 @@ public class HomeFragment extends Fragment {
     {
         super.onViewCreated(view, savedInstanceState);
         listView = view.findViewById(R.id.listViewHomeMusic);
+        arrayList = getData();
+        musicAdapter = new MusicAdapter(getContext(), R.layout.music_view_adapter, arrayList);
+        listView.setAdapter(musicAdapter);
+        final int[] n = new int[getData().size()];
+        for (int i = 0; i < n.length; i++) {
+            n[i] = -1;
+        }
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (n[position] == -1){
+                    n[position] = 1;
+                    Toast.makeText(getContext(), position + "", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 
     public ArrayList<Music> getData()
     {
-        return null;
+        ArrayList<Music> tmp = new ArrayList<>();
+        tmp.add(new Music(getString(R.string.M_1_Trieu_Like), getString(R.string.TG_Den_Vau),
+                Music.convertStringToBitmapFromAccess(getContext(), "DenVau.jpg") ));
+        tmp.add(new Music(getString(R.string.M_10_Nam), getString(R.string.TG_Den_Vau),
+                Music.convertStringToBitmapFromAccess(getContext(), "DenVau.jpg") ));
+        tmp.add(new Music(getString(R.string.M_Con_mua_ngang_qua), getString(R.string.TG_MTP),
+                Music.convertStringToBitmapFromAccess(getContext(), "MTP.jpg") ));
+        return tmp;
     }
 }
