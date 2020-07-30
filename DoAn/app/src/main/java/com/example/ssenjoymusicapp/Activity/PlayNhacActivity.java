@@ -64,7 +64,7 @@ public class PlayNhacActivity extends AppCompatActivity {
     }
 
     private void eventClick() {
-        /*final Handler handler = new Handler();
+        final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -73,11 +73,11 @@ public class PlayNhacActivity extends AppCompatActivity {
                         fragmentDiaNhac.PLayNhac(mangBaihat.get(0).getHinhBaiHat());
                         handler.removeCallbacks(this);
                     }else {
-                        handler.postDelayed(this,300);
+                        handler.postDelayed(this,500);
                     }
                 }
             }
-        },500);*/
+        },1000);
         imgPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -292,7 +292,7 @@ public class PlayNhacActivity extends AppCompatActivity {
         adapapternhac.AddFragment(fragmentPlayDanhSachBaiHat);
         adapapternhac.AddFragment(fragmentDiaNhac);
         viewPagerPlayNhac.setAdapter(adapapternhac);
-        //fragmentDiaNhac =  (Fragment_DiaNhac) adapapternhac.getItem(1);
+        fragmentDiaNhac =  (Fragment_DiaNhac) adapapternhac.getItem(1);
         if(mangBaihat.size()> 0)
         {
             getSupportActionBar().setTitle(mangBaihat.get(0).getTenBaiHat());
