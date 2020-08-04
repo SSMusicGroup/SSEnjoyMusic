@@ -26,7 +26,7 @@ public interface DataService {
     @GET("ChuDeVaTheLoaiTrongNgay.php")
     Call<List<ChuDeVaTheLoai>> GetDataChuDeVaTheLoai();
 
-    //Sử dụng phương thức POST để gửi dữ liệu lên server
+    //Sử dụng phương thức POST để gửi dữ liệu lên server và nhận về
     @FormUrlEncoded
     @POST("DanhSachBaiHat.php")
     Call<List<Baihat>> GetDanhSachBaihatTheoQuangCao(@Field("idQuangCao") String idQuangCao);
