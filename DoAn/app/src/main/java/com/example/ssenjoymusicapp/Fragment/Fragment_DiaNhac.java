@@ -34,11 +34,10 @@ public class Fragment_DiaNhac extends Fragment {
         view =  inflater.inflate(R.layout.fragment_dia_nhac,container,false);
         circleImageView = view.findViewById(R.id.imageviewCircle);
         objectAnimator = objectAnimator.ofFloat(circleImageView,"rotation",0f,360f);
-        objectAnimator.setDuration(20000);
+        objectAnimator.setDuration(1000);
         objectAnimator.setRepeatCount(ValueAnimator.INFINITE);
         objectAnimator.setRepeatMode(ValueAnimator.RESTART);
         objectAnimator.setInterpolator(new LinearInterpolator());
-        objectAnimator.start();
         return view;
     }
     public void PLayNhac(String hinh){
